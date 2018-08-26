@@ -5,14 +5,14 @@ import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
 
-import com.framework.db.UsuarioDao;
+import com.framework.db.UsuarioDAO;
 import com.framework.model.Usuario;
 
 @ManagedBean (name = "LoginMB")
 @ViewScoped
 public class LoginManagedBean {
 	
-	private UsuarioDao usuarioDAO = new UsuarioDao();
+	private UsuarioDAO usuarioDAO = new UsuarioDAO();
 	private Usuario usuario = new Usuario();
 	
 	public String enviar() {
@@ -22,7 +22,7 @@ public class LoginManagedBean {
 			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_ERROR, "Usuario não encontrado!", "Erro no login"));
 			return null;
 		} else {
-			return "/main";
+			return "main";
 		}
 	}
 	

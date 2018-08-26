@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:p="http://primefaces.org/ui">
+
+   <h:head>
+  	  <title>Seja bem Vindo</title>
+   </h:head>
+   <h:body>
+
+	<h:form>
+		<p:messages id="messagens" />
+		
+
+			<input type="hidden" name="nomeUsuario" value="silvio" />
+			<input type="hidden" name="matricula" value="123" />
+
+			<h:commandLink action="#{cardLoginMB.enviar}">
+				<p:graphicImage id="cartao"
+					value="resources/imagens/lendoCartao.jpg" width="250" height="190">
+				</p:graphicImage>
+			</h:commandLink>
+		
+
+	</h:form>
+
+</h:body>
+</html>
